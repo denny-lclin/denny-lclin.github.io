@@ -9,38 +9,99 @@
 	<link rel="stylesheet" href=".\font-awesome-4.7.0\css\font-awesome.css">
     <link rel="stylesheet" href=".\css\main.css">
     
-    <title>Liang Chi&sbquo; Lin&#39;s Blog</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+	<title>Liang Chi&sbquo; Lin&#39;s Blog</title>
 </head>
 
 <body>
 	<div class="sidebar-container">
         <div class="sidebar-profile">
-            <a href="#about"><img src=".\images\avatar.jpg" alt="Liang Chi Lin's avatar"></a>
-            <h3>Liang Chi, Lin</h3>
+            <a href="#about">
+				<img src=".\images\avatar.jpg" alt="Liang Chi Lin's avatar">
+			</a>
+			<a href='#about'>
+				<h3>Liang Chi, Lin</h3>
+			</a>
         </div>
         <div class="sidebar-buttons">
             <ul>
                 <li class="sidebar-button">
-					<a href=""><i class="fa fa-home" aria-hidden="true"></i>Home</a>	
+					<a href="">
+						<i class="fa fa-home" aria-hidden="true"></i>
+						<span>Home</span>
+					</a>	
 				</li>
                 <li class="sidebar-button">
-					<a href="#contact"><i class="fa fa-phone" aria-hidden="true"></i>Contact me</a>
+					<a class="btn" data-popup-open="popup-1" href="#">
+						<i class="fa fa-phone" aria-hidden="true"></i>
+						<span>Contact me</span>
+					</a>
 				</li>
                 <li class="sidebar-button">
-					<a href="https://github.com/denny-lclin" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>Github</a>
+					<a href="https://github.com/denny-lclin" target="_blank">
+						<i class="fa fa-github" aria-hidden="true"></i>
+						<span>Github</span>
+					</a>
 				</li>
             </ul>
         </div>
     </div>
    
+    
+	<div class="popup" data-popup="popup-1">
+		<div class="popup-inner">
+			<div class="phone-number">
+				<i class="fa fa-mobile fa-3x" aria-hidden="true"></i>
+				<span>+886958102282</span>
+			</div>
+			
+				<div class="social-media-instagram">
+					<a href="https://www.instagram.com/liangchi2201/" target="_blanck">
+						<i class="fa fa-instagram fa-3x" aria-hidden="true" alt="myinstagram"></i>
+					</a>
+				</div>
+				<div class="social-media-facebook">
+					<a href="https://www.facebook.com/liangchi.lin.7" target="_blanck">
+						<i class="fa fa-facebook fa-3x" aria-hidden="true" alt="myfacebook"></i>
+					</a>
+				</div>
+				<div class="social-media-twitch">
+					<a href="https://www.twitch.tv/dennylin" target="_blanck">
+						<i class="fa fa-twitch fa-3x" aria-hidden="true" alt="mytwitch"></i>
+					</a>
+				</div>
+			
+			<a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+		</div>
+	</div>
 	
 	
     
     <div id="contact">
 		
 	</div>
+	<script>
+	$(function() {
+    //----- OPEN
+    $('[data-popup-open]').on('click', function(e)  {
+        var targeted_popup_class = jQuery(this).attr('data-popup-open');
+        $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+ 
+        e.preventDefault();
+    });
+ 
+    //----- CLOSE
+    $('[data-popup-close]').on('click', function(e)  {
+        var targeted_popup_class = jQuery(this).attr('data-popup-close');
+        $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+ 
+        e.preventDefault();
+    });
+});</script>
     
 	
     <!-- <script src="https://use.fontawesome.com/5ad7c71ae5.js"></script> font-awesome 線上js版，載入慢-->
 </body>
+
 
