@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One|Kaushan+Script');
+
+body {
+	margin: 0px;	
+}
+
+a {
+	text-decoration: none;
+}
+
+.sidebar-container {
+    background-color: #008F2F;
+    position: fixed;
+    left:0;
+    margin: 0px;
+    padding: 0px;
+    width: 200px;
+    height: 100%;
+    
+}
+
+.sidebar-profile {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 120%;
+	padding-top:13%; 
+    text-align: center;
+	size: 50%
+}
+.sidebar-profile img {
+    width: 60%;
+    height: 60%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+ul {
+	font-family: 'Hammersmith One', sans-serif;
+	font-size: 120%;
+    list-style-type: none;
+    text-align: left;
+	padding: 5%;
+}
+
+ul li.sidebar-button {
+	padding-bottom: 10%;
+}
+
+.sidebar-button i {
+	padding-right: 12%;
+}
