@@ -34,7 +34,7 @@
 					</a>	
 				</li>
                 <li class="sidebar-button">
-					<a class="btn" data-popup-open="popup-1" href="#">
+					<a class="btn" data-popup-open="popup-1" href="">
 						<i class="fa fa-phone" aria-hidden="true"></i>
 						<span>Contact me</span>
 					</a>
@@ -79,27 +79,24 @@
 	
 	
     
-    <div id="contact">
-		
-	</div>
+  
 	<script>
 	$(function() {
     //----- OPEN
-    $('[data-popup-open]').on('click', function(e)  {
-        var targeted_popup_class = jQuery(this).attr('data-popup-open');
-        $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
- 
-        e.preventDefault();
-    });
+        $('[data-popup-open]').on('click', function(e)  {
+            var targeted_popup_class = jQuery(this).attr('data-popup-open');
+            $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+            e.preventDefault();
+        });
  
     //----- CLOSE
-    $('[data-popup-close]').on('click', function(e)  {
-        var targeted_popup_class = jQuery(this).attr('data-popup-close');
-        $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
- 
-        e.preventDefault();
+        $('[data-popup-close]').on('click', function(e)  {
+            var targeted_popup_class = jQuery(this).attr('data-popup-close');
+            $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+            e.preventDefault();
+        });
     });
-});</script>
+    </script>
     
 	
     <!-- <script src="https://use.fontawesome.com/5ad7c71ae5.js"></script> font-awesome 線上js版，載入慢-->
